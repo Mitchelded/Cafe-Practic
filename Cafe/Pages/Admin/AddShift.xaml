@@ -1,0 +1,45 @@
+﻿<Window x:Class="Cafe.Pages.Admin.AddShift"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Cafe"
+        mc:Ignorable="d"
+        Title="AddShift" Height="450" Width="800" Background="{x:Null}" 
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Border CornerRadius="15" Margin="10" Background="White">
+            <Grid>
+                <material:PackIcon Kind="ExitToApp" HorizontalAlignment="Right" Margin="10" MouseDown="PackIcon_MouseDown" Height="25" Width="25"/>
+
+                <StackPanel   VerticalAlignment="Top" Margin="0,93,0,0">
+                    <Label Content="Date" HorizontalAlignment="Center" Width="200" 
+           Margin="-20,0,0,0"/>
+                    <DatePicker HorizontalAlignment="Center" Width="200" Margin="0,0,0,10" x:Name="dpDate"/>
+
+                    <Label Content="Start Time" HorizontalAlignment="Center" Width="200" 
+           Margin="-20,0,0,0"/>
+                    <material:TimePicker  Text="00:00:00" 
+           HorizontalAlignment="Center" Width="200" Margin="0,0,0,10" x:Name="tbSTime"/>
+
+                    <Label Content="End Time" HorizontalAlignment="Center" Width="200" 
+           Margin="-20,0,0,0"/>
+                    <material:TimePicker  Text="00:00:00" 
+           HorizontalAlignment="Center" Width="200" Margin="0,0,0,10" x:Name="tbETime" />
+
+                    <Label Content="Login Employee" HorizontalAlignment="Center" Width="200" 
+           Margin="-20,0,0,0"/>
+                    <TextBox  Text="Login Employee" 
+                 HorizontalAlignment="Center" Width="200" Margin="0,0,0,10" x:Name="tbLogin"/>
+
+
+                    <Button  Content="Add" 
+            HorizontalAlignment="Center" Width="200" Margin="0,0,0,10" 
+            BorderThickness="0" x:Name="Add" Click="Add_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
